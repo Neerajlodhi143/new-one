@@ -1,0 +1,112 @@
+1. 🔍 Device Model Selector
+Function: User chooses their IoT device or searches for it.
+
+Frontend:
+
+HTML <select> or <input> with JavaScript for search functionality.
+
+Data Source:
+
+JSON file containing device brands, models, and types.
+
+Libraries:
+
+fuse.js (optional) for fuzzy search
+
+Workflow:
+
+text
+Copy
+Edit
+User types or selects → JavaScript matches model → fetch checklist from backend or JSON
+2. 📋 Dynamic Checklist Generator
+Function: Loads the checklist specific to the selected model.
+
+Frontend:
+
+JavaScript renders checklist with checkboxes
+
+Backend (if needed):
+
+Flask fetches checklist from JSON or database
+
+Libraries:
+
+Native JavaScript OR use a framework like Vue.js for reactivity
+
+Workflow:
+
+text
+Copy
+Edit
+User selects model → fetch checklist → render steps as interactive list
+3. ✅ Progress Tracker
+Function: User marks steps completed; progress is saved.
+
+Frontend:
+
+Use localStorage to save user’s progress in the browser
+
+Libraries:
+
+Vanilla JS or localForage (for more advanced storage)
+
+Workflow:
+
+text
+Copy
+Edit
+Checkbox clicked → save state to localStorage → restore on reload
+4. 📥 Checklist Export (PDF)
+Function: Allow exporting completed checklist as PDF.
+
+Libraries:
+
+html2pdf.js or jsPDF
+
+Workflow:
+
+text
+Copy
+Edit
+User clicks "Export" → DOM converted to PDF → Download prompt triggered
+5. 💡 Step-by-Step Hardening Instructions
+Function: Show secure settings, default password changes, firmware update steps, etc.
+
+Data Source:
+
+Stored in Markdown or HTML
+
+Frontend:
+
+Rendered inline using JavaScript
+
+Libraries:
+
+marked.js (if using Markdown)
+
+Workflow:
+
+text
+Copy
+Edit
+User clicks a checklist item → show expandable instructions below
+6. ✍️ User Feedback & Device Suggestion
+Function: Collect feedback or suggest a missing device.
+
+Form Fields: Name, Email, Device Suggestion, Message
+
+Backend (if dynamic):
+
+Flask saves suggestion to JSON or SQLite
+
+Alternative:
+
+Use mailto: link to receive feedback via email without a backend
+
+Workflow:
+
+text
+Copy
+Edit
+User submits form → save to file or send via email → future updates from suggestions
